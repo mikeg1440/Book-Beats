@@ -15,9 +15,8 @@ const App = () => {
       <AppHeader>
         <h1>Book Beats</h1>
         <h3>The Ultimate Book-Music Connection</h3>
+        <SearchBar handleGenerate={handleGenerate} />
       </AppHeader>
-
-      <SearchBar handleGenerate={handleGenerate} />
 
       <VideoContainer>
         <iframe width="560" height="340">
@@ -36,10 +35,10 @@ const AppContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   color: white;
-  background-color: darkgray;
+  background-color: black;
   width: 100vw;
   height: 100vh;
-  background-image: url("/MusicAndBooks.png");
+  background-image: url("/BookMusic.png");
   background-repeat: no-repeat;
   background-size: cover;
 `;
@@ -48,12 +47,14 @@ const AppHeader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  min-height: 300px;
+  > h1 {
+    font-size: 4em;
+  }
 `;
 
 const VideoContainer = styled.div`
-  min-width: 570px;
-  min-height: 350px;
-  border: 1px solid white;
   border-radius: 5px;
   display: flex;
   align-items: center;
