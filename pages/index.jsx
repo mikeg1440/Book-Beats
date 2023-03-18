@@ -7,8 +7,13 @@ const App = () => {
   const VideoPlayer = useRef(null);
   const [songName, setSongName] = useState("");
 
-  const handleGenerate = (bookTitle) => {
-    alert(bookTitle);
+  const parseData = (data) => {
+    let [title, songString] = data.split("\n\n");
+    songString = songString.replace(/"/g, "");
+    const songs = songString.split(", ");
+    setSongName(songs[0]);
+    getYoutubeVideo(songName);
+  };
   };
 
   return (
