@@ -30,7 +30,7 @@ const App = () => {
       return;
     }
 
-    return `https://www.youtube.com/embed/${embedId}`;
+    return `https://www.youtube.com/embed/${embedId}?&autoplay=1`;
   };
 
   const getYoutubeVideo = (searchTerm) => {
@@ -82,7 +82,7 @@ const App = () => {
 
       <VideoContainer>
         {songName}
-        <iframe width="560" height="340" ref={VideoPlayer}>
+        <iframe ref={VideoPlayer} allow="autoplay">
           VideoPlayer
         </iframe>
       </VideoContainer>
