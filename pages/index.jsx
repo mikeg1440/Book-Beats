@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import SearchBar from "./components/SearchBar";
+import VideoPlayer from "./components/VideoPlayer";
 
 const App = () => {
-  const VideoPlayer = useRef(null);
   const [songName, setSongName] = useState("");
+  const [videoSrc, setVideoSrc] = useState("");
 
   const parseData = (data) => {
     let [title, songString] = data.split("\n\n");
@@ -46,7 +47,8 @@ const App = () => {
           typeof resp === "string"
             ? transformYoutubeUrl(JSON.parse(resp)[5].link)
             : transformYoutubeUrl(resp[5].link);
-        VideoPlayer.current.setAttribute("src", embedUrl);
+        // VideoPlayer.current.setAttribute("src", embedUrl);
+        setVideoSrc(embedUrl);
       })
       .catch((err) => console.log("Failed to get youtube data", err));
   };
@@ -78,12 +80,7 @@ const App = () => {
         <SearchBar handleGenerate={handleGenerate} />
       </AppHeader>
 
-      <VideoContainer>
-        {songName}
-        <VideoIframe ref={VideoPlayer} allow="autoplay">
-          VideoPlayer
-        </VideoIframe>
-      </VideoContainer>
+      <VideoPlayer songName={songName} videoSrc={videoSrc} />
     </AppContainer>
   );
 };
@@ -113,28 +110,4 @@ const AppHeader = styled.header`
   > h1 {
     font-size: 4em;
   }
-`;
-
-const VideoContainer = styled.div`
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  height: 35vw;
-  max-width: 900px;
-  max-height: 600px;
-`;
-
-const VideoIframe = styled.iframe`
-  width: 100%;
-  height: 100%;
-`;
-
-const SongName = styled.div`
-  font-size: 2em;
 `;
