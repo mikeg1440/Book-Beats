@@ -14,6 +14,23 @@ const App = () => {
     setSongName(songs[0]);
     getYoutubeVideo(songName);
   };
+  const handleGenerate = async (bookTitle) => {
+    const prodApi = "/api/generate";
+    const devApi = "/api/mockAI";
+    fetch(devApi, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ bookTitle }),
+    })
+      .then((resp) => resp.json())
+      .then((resp) => {
+        const output = resp.output;
+        console.log(output);
+        parseData(output.text);
+      })
+      .catch((err) => console.log("Failed to get ai output", err));
   };
 
   return (
