@@ -80,9 +80,9 @@ const App = () => {
 
       <VideoContainer>
         {songName}
-        <iframe ref={VideoPlayer} allow="autoplay">
+        <VideoIframe ref={VideoPlayer} allow="autoplay">
           VideoPlayer
-        </iframe>
+        </VideoIframe>
       </VideoContainer>
     </AppContainer>
   );
@@ -124,6 +124,15 @@ const VideoContainer = styled.div`
   border: none;
   display: flex;
   flex-direction: column;
+  width: 60%;
+  height: 35vw;
+  max-width: 900px;
+  max-height: 600px;
+`;
+
+const VideoIframe = styled.iframe`
+  width: 100%;
+  height: 100%;
 `;
 
 const SongName = styled.div`
