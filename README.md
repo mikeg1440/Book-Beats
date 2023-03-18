@@ -48,6 +48,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Todo](#todo)
+  - [Ideas](#ideas)
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
@@ -66,6 +67,14 @@
 
 - [ ] Replace await with updated `.then()` use
 - [x] Add mock endpoints with saved data so we don't use up free requests for API keys
+
+### Ideas
+
+- [ ] Give users ability to select from the the top 3 youtube videos in case the first one isn't good
+- [ ] Display the full list of songs returned by the AI
+  - [ ] Autoplay the next song in the list when a song finishes
+  - [ ] Display playlist for user to see
+  - [ ] Allow user to select from playlist
 
 ## About The Project
 
