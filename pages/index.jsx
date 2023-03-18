@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import SearchBar from "./components/SearchBar";
 
@@ -14,6 +14,25 @@ const App = () => {
     setSongName(songs[0]);
     getYoutubeVideo(songName);
   };
+
+  // transforms a youtube url link to a embed link that works with the iframe
+  const transformYoutubeUrl = (originalUrl) => {
+    const regX = /v=([\w]+)/gi;
+    const regMatch = originalUrl.match(regX);
+    debugger;
+
+    const embedId = regMatch[0].replace("v=", "");
+
+    if (!embedId.length > 0) {
+      console.log(embedId);
+      // throw new Error("Embed ID not found!");
+      debugger;
+      return;
+    }
+
+    return `https://www.youtube.com/embed/${embedId}`;
+  };
+
   const getYoutubeVideo = (searchTerm) => {
     // get list of results from a youtube search using fetch request
     const prodApi = "/api/youtubeSearch";
@@ -108,4 +127,7 @@ const VideoContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+const SongName = styled.div`
+  font-size: 2em;
 `;
