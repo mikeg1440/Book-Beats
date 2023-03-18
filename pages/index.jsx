@@ -21,6 +21,7 @@ const App = () => {
 
       <VideoContainer>
         {songName}
+        <iframe width="560" height="340" ref={VideoPlayer}>
           VideoPlayer
         </iframe>
       </VideoContainer>
