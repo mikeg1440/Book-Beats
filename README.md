@@ -1,38 +1,180 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!--
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** github_username, repo, twitter_handle, email
+-->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/mikeg1440/repo">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Book Beats</h3>
+
+  <p align="center">
+    Take a book your reading and get a AI generated a sound track to listen to while reading.
+    <br />
+    <a href="https://github.com/mikeg1440/repo"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/mikeg1440/repo">View Demo</a>
+    ·
+    <a href="https://github.com/mikeg1440/repo/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/mikeg1440/repo/issues">Request Feature</a>
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+Here's a blank template to get started:
+**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
+`github_username`, `repo`, `twitter_handle`, `email`
+
+### Built With
+
+- [React.js]()
+- [Node.js]()
+  - [google-search-results-nodejs](https://github.com/serpapi/google-search-results-nodejs)
+- [OpenAI]()
+
+<!-- GETTING STARTED -->
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+
+- npm
+
+```sh
+npm install npm@latest -g
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Need to create a `.dotenv` file with the following API keys
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+OPENAI_API_KEY=YOUR_KEY
+SERP_API_KEY=YOUR_KEY
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repo
 
-## Learn More
+```sh
+git clone https://github.com/mikeg1440/repo.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install NPM packages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<!-- USAGE EXAMPLES -->
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+See the [open issues](https://github.com/mikeg1440/repo/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+Mike G - [@mylogicbytes1](https://twitter.com/mylogicbytes1)
+
+Project Link: [https://github.com/mikeg1440/repo](https://github.com/mikeg1440/repo)
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+- []()
+- []()
+- []()
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/mikeg1440/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/mikeg1440/repo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mikeg1440/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/mikeg1440/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/mikeg1440/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/mikeg1440/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mikeg1440/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/mikeg1440/repo/issues
+[license-shield]: https://img.shields.io/github/license/mikeg1440/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/mikeg1440/repo/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/michaelgaudreau
+[product-screenshot]: images/screenshot.png
