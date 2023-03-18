@@ -96,7 +96,7 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: white;
   background-color: black;
   width: 100vw;
