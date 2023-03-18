@@ -47,6 +47,7 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Todo](#todo)
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
@@ -60,6 +61,11 @@
 - [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
+
+## Todo
+
+- [ ] Replace await with updated `.then()` use
+- [x] Add mock endpoints with saved data so we don't use up free requests for API keys
 
 ## About The Project
 
