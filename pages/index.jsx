@@ -14,6 +14,26 @@ const App = () => {
     setSongName(songs[0]);
     getYoutubeVideo(songName);
   };
+  const getYoutubeVideo = (searchTerm) => {
+    // get list of results from a youtube search using fetch request
+    const prodApi = "/api/youtubeSearch";
+    const devApi = "/api/mockYoutube";
+    fetch(devApi, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ searchQuery: searchTerm }),
+    })
+      .then((resp) => resp.json())
+      .then((resp) => {
+        const embedUrl =
+          typeof resp === "string"
+            ? transformYoutubeUrl(JSON.parse(resp)[5].link)
+            : transformYoutubeUrl(resp[5].link);
+        VideoPlayer.current.setAttribute("src", embedUrl);
+      })
+      .catch((err) => console.log("Failed to get youtube data", err));
+  };
+
   const handleGenerate = async (bookTitle) => {
     const prodApi = "/api/generate";
     const devApi = "/api/mockAI";
