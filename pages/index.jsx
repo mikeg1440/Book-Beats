@@ -19,15 +19,13 @@ const App = () => {
   const transformYoutubeUrl = (originalUrl) => {
     const regX = /v=([\w]+)/gi;
     const regMatch = originalUrl.match(regX);
-    debugger;
 
     const embedId = regMatch[0].replace("v=", "");
 
     if (!embedId.length > 0) {
       console.log(embedId);
       // throw new Error("Embed ID not found!");
-      debugger;
-      return;
+      throw new Error("Couldn't get embed ID from youtube video!");
     }
 
     return `https://www.youtube.com/embed/${embedId}?&autoplay=1`;
