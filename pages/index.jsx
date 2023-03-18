@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar";
 
 const App = () => {
   const VideoPlayer = useRef(null);
+  const [songName, setSongName] = useState("");
 
   const handleGenerate = (bookTitle) => {
     alert(bookTitle);
@@ -19,7 +20,7 @@ const App = () => {
       </AppHeader>
 
       <VideoContainer>
-        <iframe width="560" height="340">
+        {songName}
           VideoPlayer
         </iframe>
       </VideoContainer>
