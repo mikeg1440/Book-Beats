@@ -61,4 +61,7 @@ const VideoContainer = styled.div`
   justify-content: center;
   border-radius: 10px;
   border: none;
+  display: flex;
+  flex-direction: column;
+`;
 `;
