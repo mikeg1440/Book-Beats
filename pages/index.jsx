@@ -12,7 +12,7 @@ const App = () => {
     let [title, songString] = data.split("\n\n");
     songString = songString.replace(/"/g, "");
     const songs = songString.split(", ");
-    setSongName(songs[0]);
+    // setSongName(songs[0]);
     getYoutubeVideo(songName);
   };
 
@@ -45,9 +45,11 @@ const App = () => {
       .then((resp) => {
         const embedUrl =
           typeof resp === "string"
-            ? transformYoutubeUrl(JSON.parse(resp)[5].link)
-            : transformYoutubeUrl(resp[5].link);
-        // VideoPlayer.current.setAttribute("src", embedUrl);
+            ? transformYoutubeUrl(JSON.parse(resp)[0].link)
+            : transformYoutubeUrl(resp[0].link);
+        typeof resp === "string"
+          ? setSongName(JSON.parse(resp)[0].title)
+          : setSongName(resp[0].title);
         setVideoSrc(embedUrl);
       })
       .catch((err) => console.log("Failed to get youtube data", err));
@@ -103,6 +105,7 @@ const AppContainer = styled.div`
   background-image: url("/BookMusic.png");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 `;
 
 const AppHeader = styled.header`
