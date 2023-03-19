@@ -39,4 +39,7 @@ const SongName = styled.div`
   border-radius: 5px;
   background-color: #80808085;
   padding: 0 0.5rem;
+  max-width: 60%;
+  text-align: center;
+  margin-bottom: 1rem;
 `;
