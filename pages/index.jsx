@@ -80,7 +80,11 @@ const App = () => {
         <SearchBar handleGenerate={handleGenerate} />
       </AppHeader>
 
+      <LeftImage src="/equilizer.png" />
+
       <VideoPlayer songName={songName} videoSrc={videoSrc} />
+
+      <RightImage src="/music_notes.png" />
     </AppContainer>
   );
 };
@@ -110,4 +114,20 @@ const AppHeader = styled.header`
   > h1 {
     font-size: 4em;
   }
+`;
+
+const LeftImage = styled.img`
+  position: absolute;
+  left: -25px;
+  top: 45px;
+  width: 400px;
+  transform: rotate(-45deg);
+`;
+
+const RightImage = styled.img`
+  position: absolute;
+  right: -25px;
+  bottom: 25px;
+  width: 300px;
+  transform: rotate(45deg);
 `;
