@@ -35,7 +35,7 @@ const VideoIframe = styled.iframe`
 
 const SongName = styled.div`
   font-size: 2em;
-  font-color: cyan;
+  color: #00ffff;
   border-radius: 5px;
   background-color: #80808085;
   padding: 0 0.5rem;
