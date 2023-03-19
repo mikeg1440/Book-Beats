@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function VideoPlayer({ songName, videoSrc }) {
   return (
     <VideoContainer>
-      {songName}
+      <SongName>{songName}</SongName>
       <VideoIframe
         ref={VideoPlayer}
         src={videoSrc}
@@ -35,4 +35,8 @@ const VideoIframe = styled.iframe`
 
 const SongName = styled.div`
   font-size: 2em;
+  font-color: cyan;
+  border-radius: 5px;
+  background-color: #80808085;
+  padding: 0 0.5rem;
 `;
