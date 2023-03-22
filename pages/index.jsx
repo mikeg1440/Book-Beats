@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import SearchBar from "./components/SearchBar";
 import VideoPlayer from "./components/VideoPlayer";
+import Playlist from "./components/Playlist";
 
 const App = () => {
   const [songName, setSongName] = useState("");
@@ -87,6 +88,8 @@ const App = () => {
       <VideoPlayer songName={songName} videoSrc={videoSrc} />
 
       <RightImage src="/music_notes.png" />
+
+      <Playlist />
     </AppContainer>
   );
 };
@@ -123,7 +126,6 @@ const LeftImage = styled.img`
   position: absolute;
   left: -25px;
   top: 45px;
-  width: 400px;
   transform: rotate(-45deg);
 `;
 
@@ -131,6 +133,5 @@ const RightImage = styled.img`
   position: absolute;
   right: -25px;
   bottom: 25px;
-  width: 300px;
   transform: rotate(45deg);
 `;
