@@ -1,9 +1,6 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 
 export default function Playlist({ songs, newSongSelected }) {
-  const handleSongClick = (e) => {};
-
   const handleExitClick = (e) => {
     const playlist = document.querySelector("#playlist");
 
@@ -12,19 +9,6 @@ export default function Playlist({ songs, newSongSelected }) {
     }
   };
 
-  useEffect(() => {
-    // update song list with song state
-    if (songs.length > 0) {
-      const songList = document.querySelector("#songList");
-      songList.innerHTML = "";
-
-      for (const song of songs) {
-        let songItem = `<li>${song}</li>`;
-        songList.innerHTML += songItem;
-      }
-    }
-  }, [songs]);
-
   return (
     <OverlayContainer id="playlist" onClick={handleExitClick}>
       <HeaderContainer>
@@ -32,12 +16,14 @@ export default function Playlist({ songs, newSongSelected }) {
       </HeaderContainer>
 
       <PlaylistContent>
-        <h1>Song List</h1>
+        <OverlayHeader>Song List</OverlayHeader>
         <SongList id="songList">
-          <li>Song 1</li>
-          <li>Song 2</li>
-          <li>Song 3</li>
-          <li>Song 4</li>
+          {songs.length > 0 &&
+            songs.map((song) => (
+              <SongListItem song={song} onClick={() => newSongSelected(song)}>
+                {song}
+              </SongListItem>
+            ))}
         </SongList>
       </PlaylistContent>
     </OverlayContainer>
@@ -57,8 +43,8 @@ const OverlayContainer = styled.div`
   grid-template-rows: 0.1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  overflow: scroll;
 `;
 
 const HeaderContainer = styled.div`
@@ -76,17 +62,16 @@ const ExitButton = styled.div`
   display: flex;
   justify-content: center;
   alight-items: center;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
   :hover {
     cursor: pointer;
+    color: orange;
   }
 `;
 
 const SongList = styled.ul`
   padding-top: 1rem;
   list-style: none, outside, none;
-  > li {
-    padding-top: 0.5rem;
-  }
 `;
 
 const PlaylistContent = styled.div`
@@ -94,4 +79,19 @@ const PlaylistContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+`;
+
+const OverlayHeader = styled.div`
+  font-size: 4vmin;
+`;
+
+const SongListItem = styled.li`
+  color: cyan;
+  font-size: clamp(20px, 1rem, 40px);
+  list-style: none;
+  margin-top: 2rem;
+  :hover {
+    cursor: pointer;
+  }
 `;
