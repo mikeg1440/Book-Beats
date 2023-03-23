@@ -56,4 +56,7 @@ const SearchButton = styled.button`
     filter: translateY(4px);
     filter: brightness(90%);
   }
+  :hover {
+    cursor: pointer;
+  }
 `;
