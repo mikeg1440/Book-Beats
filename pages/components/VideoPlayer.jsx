@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
-export default function VideoPlayer({ songName, videoSrc }) {
+export default function VideoPlayer({ currentSong, videoSrc }) {
   return (
     <VideoContainer>
-      <SongName>{songName}</SongName>
-      <VideoIframe
-        ref={VideoPlayer}
-        src={videoSrc}
-        allow="autoplay"
-      ></VideoIframe>
+      <SongName>{currentSong.title}</SongName>
+      <VideoIframe src={videoSrc} allow="autoplay"></VideoIframe>
     </VideoContainer>
   );
 }
