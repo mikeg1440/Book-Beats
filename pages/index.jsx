@@ -89,7 +89,7 @@ const App = () => {
 
       <RightImage src="/music_notes.png" />
 
-      <Playlist />
+      <PlaylistButton onClick={togglePlaylist}>Open Playlist</PlaylistButton>
     </AppContainer>
   );
 };
