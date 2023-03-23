@@ -68,10 +68,12 @@
 - [ ] Replace await with updated `.then()` use
 - [x] Add mock endpoints with saved data so we don't use up free requests for API keys
 - [ ] Display video playlist incase first video isn't what user wanted
-  - [ ] Implement a overlay that toggles with a button
-  - [ ] Load song names
+  - [x] Implement a overlay that toggles with a button
+  - [x] Load song names
   - [ ] Add click functionality
   - [ ] Change song data to pass a object instead of just song name
+  - [ ] Add thumbnail image and more formatting to emphasize song name
+  - [ ] Save song object instead of just name
 
 ### Ideas
 
