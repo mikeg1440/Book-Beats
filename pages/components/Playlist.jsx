@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function Playlist({ songs, newSongSelected }) {
+export default function Playlist({ list, newSelectionCallback }) {
   const handleExitClick = (e) => {
     const playlist = document.querySelector("#playlist");
 
@@ -18,9 +18,12 @@ export default function Playlist({ songs, newSongSelected }) {
       <PlaylistContent>
         <OverlayHeader>Song List</OverlayHeader>
         <SongList id="songList">
-          {songs.length > 0 &&
-            songs.map((song) => (
-              <SongListItem song={song} onClick={() => newSongSelected(song)}>
+          {list.length > 0 &&
+            list.map((song) => (
+              <SongListItem
+                song={song}
+                onClick={() => newSelectionCallback(song)}
+              >
                 {song}
               </SongListItem>
             ))}
