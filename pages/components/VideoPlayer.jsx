@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export default function VideoPlayer({ currentSong, videoSrc }) {
+export default function VideoPlayer({ currentVideo }) {
   return (
     <VideoContainer>
-      <SongName>{currentSong.title}</SongName>
-      <VideoIframe src={videoSrc} allow="autoplay"></VideoIframe>
+      <SongName>{currentVideo.title}</SongName>
+      <VideoIframe src={currentVideo.embedUrl} allow="autoplay"></VideoIframe>
     </VideoContainer>
   );
 }
