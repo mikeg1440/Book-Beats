@@ -47,7 +47,7 @@ const OverlayContainer = styled.div`
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
-  overflow: scroll;
+  overflow-y: scroll;
 `;
 
 const HeaderContainer = styled.div`
