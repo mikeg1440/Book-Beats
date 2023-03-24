@@ -117,18 +117,23 @@ const App = () => {
         <SearchBar handleGenerate={handleGenerate} />
       </AppHeader>
 
-      <ToggleContainer>
-        <Playlist list={playlist} newSelectionCallback={newSongSelected} />
-        <PlaylistButton onClick={togglePlaylist}>Open Playlist</PlaylistButton>
-        <Videolist list={videos} newSelectionCallback={newVideoSelected} />
-        <PlaylistButton onClick={toggleVideolist}>
-          Open Videolist
-        </PlaylistButton>
-      </ToggleContainer>
+      {currentVideo.hasOwnProperty("title") && (
+        <ToggleContainer>
+          <Playlist list={playlist} newSelectionCallback={newSongSelected} />
+          <PlaylistButton onClick={togglePlaylist}>
+            Open Playlist
+          </PlaylistButton>
+          <Videolist list={videos} newSelectionCallback={newVideoSelected} />
+          <PlaylistButton onClick={toggleVideolist}>
+            Open Videolist
+          </PlaylistButton>
+        </ToggleContainer>
+      )}
 
       <LeftImage src="/equilizer.png" />
 
       <Loading isLoading={isLoading} />
+
       <VideoPlayer currentVideo={currentVideo} />
 
       <RightImage src="/music_notes.png" />
