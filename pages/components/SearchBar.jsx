@@ -58,5 +58,6 @@ const SearchButton = styled.button`
   }
   :hover {
     cursor: pointer;
+    background-color: #00ffff;
   }
 `;
