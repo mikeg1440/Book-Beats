@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export default function VideoPlayer({ currentVideo }) {
-  return (
+  return currentVideo.hasOwnProperty("title") ? (
     <VideoContainer>
       <SongName>{currentVideo.title}</SongName>
       <VideoIframe src={currentVideo.embedUrl} allow="autoplay"></VideoIframe>
     </VideoContainer>
+  ) : (
+    <>&nbsp;</>
   );
 }
 
