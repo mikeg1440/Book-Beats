@@ -22,6 +22,7 @@ const App = () => {
     setPlaylist(songs);
     setCurrentVideo(songs[0]);
     getYoutubeVideos(currentVideo.title);
+    setIsLoading(false);
   };
 
   // transforms a youtube url link to a embed link that works with the iframe
@@ -44,6 +45,8 @@ const App = () => {
     // get list of results from a youtube search using fetch request
     const prodApi = "/api/youtubeSearch";
     const devApi = "/api/mockYoutube";
+
+    setIsLoading(true);
     fetch(devApi, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
