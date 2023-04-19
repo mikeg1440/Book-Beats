@@ -70,10 +70,14 @@
 - [ ] Display video playlist incase first video isn't what user wanted
   - [x] Implement a overlay that toggles with a button
   - [x] Load song names
-  - [ ] Add click functionality
+  - [x] Add click functionality to change video
   - [ ] Change song data to pass a object instead of just song name
   - [ ] Add thumbnail image and more formatting to emphasize song name
   - [ ] Save song object instead of just name
+- [ ] Display playlist that AI suggested from book title
+  - [ ] Add song click functionality that changes song from playlist
+- [ ] Change test api calls back to openai api calls
+- [ ] Add loading overlay
 
 ### Ideas
 
