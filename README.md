@@ -22,8 +22,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/mikeg1440/repo">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/mikeg1440/Book-Beats">
+    <img src="screenshots/HomeScreen.png" alt="Logo" width="400" height="200">
   </a>
 
   <h3 align="center">Book Beats</h3>
@@ -31,14 +31,14 @@
   <p align="center">
     Take a book your reading and get a AI generated a sound track to listen to while reading.
     <br />
-    <a href="https://github.com/mikeg1440/repo"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/mikeg1440/Book-Beats"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/mikeg1440/repo">View Demo</a>
+    <a href="https://github.com/mikeg1440/Book-Beats">View Demo</a>
     ·
-    <a href="https://github.com/mikeg1440/repo/issues">Report Bug</a>
+    <a href="https://github.com/mikeg1440/Book-Beats/issues">Report Bug</a>
     ·
-    <a href="https://github.com/mikeg1440/repo/issues">Request Feature</a>
+    <a href="https://github.com/mikeg1440/Book-Beats/issues">Request Feature</a>
   </p>
 </p>
 
@@ -131,7 +131,7 @@ SERP_API_KEY=YOUR_KEY
 1. Clone the repo
 
 ```sh
-git clone https://github.com/mikeg1440/repo.git
+git clone https://github.com/mikeg1440/Book-Beats.git
 ```
 
 2. Install NPM packages
@@ -152,7 +152,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-See the [open issues](https://github.com/mikeg1440/repo/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/mikeg1440/Book-Beats/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -178,7 +178,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Mike G - [@mylogicbytes1](https://twitter.com/mylogicbytes1)
 
-Project Link: [https://github.com/mikeg1440/repo](https://github.com/mikeg1440/repo)
+Project Link: [https://github.com/mikeg1440/Book-Beats](https://github.com/mikeg1440/Book-Beats)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -192,15 +192,15 @@ Project Link: [https://github.com/mikeg1440/repo](https://github.com/mikeg1440/r
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/mikeg1440/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/mikeg1440/repo/graphs/contributors
+[contributors-url]: https://github.com/mikeg1440/Book-Beats/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/mikeg1440/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/mikeg1440/repo/network/members
+[forks-url]: https://github.com/mikeg1440/Book-Beats/network/members
 [stars-shield]: https://img.shields.io/github/stars/mikeg1440/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/mikeg1440/repo/stargazers
+[stars-url]: https://github.com/mikeg1440/Book-Beats/stargazers
 [issues-shield]: https://img.shields.io/github/issues/mikeg1440/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/mikeg1440/repo/issues
+[issues-url]: https://github.com/mikeg1440/Book-Beats/issues
 [license-shield]: https://img.shields.io/github/license/mikeg1440/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/mikeg1440/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/mikeg1440/Book-Beats/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/michaelgaudreau
 [product-screenshot]: images/screenshot.png
