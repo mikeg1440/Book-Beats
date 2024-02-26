@@ -18,7 +18,6 @@ const App = () => {
     let [title, songString] = data.split("\n\n");
     songString = songString.replace(/"/g, "");
     const songs = songString.split(", ");
-    // setCurrentVideo(songs[0]);
     setPlaylist(songs);
     setCurrentVideo(songs[0]);
     getYoutubeVideos(currentVideo.title);
@@ -47,6 +46,7 @@ const App = () => {
     const devApi = "/api/mockYoutube";
 
     setIsLoading(true);
+    // this is where we switch the mock and production API for testing
     fetch(devApi, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
