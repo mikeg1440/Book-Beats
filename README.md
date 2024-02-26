@@ -47,14 +47,13 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Todo](#todo)
-  - [Ideas](#ideas)
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
+- [Todo](#todo)
+  - [Ideas](#ideas)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -63,54 +62,31 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## Todo
-
-- [ ] Replace await with updated `.then()` use
-- [x] Add mock endpoints with saved data so we don't use up free requests for API keys
-- [ ] Display video playlist incase first video isn't what user wanted
-  - [x] Implement a overlay that toggles with a button
-  - [x] Load song names
-  - [x] Add click functionality to change video
-  - [ ] Change song data to pass a object instead of just song name
-  - [ ] Add thumbnail image and more formatting to emphasize song name
-  - [ ] Save song object instead of just name
-- [ ] Display playlist that AI suggested from book title
-  - [ ] Add song click functionality that changes song from playlist
-- [ ] Change test api calls back to openai api calls
-- [ ] Add loading overlay
-
-### Ideas
-
-- [ ] Give users ability to select from the the top 3 youtube videos in case the first one isn't good
-- [ ] Display the full list of songs returned by the AI
-  - [ ] Autoplay the next song in the list when a song finishes
-  - [ ] Display playlist for user to see
-  - [ ] Allow user to select from playlist
-
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Book Beats Screen Shot][product-screenshot]](https://github.com/mikeg1440/Book-Beats)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+Book Beats is designed to take the title of the book your currently reading and suggest 10 songs that would match the tone and style of the book well. After entering a book title the first song in the playlist will start playing and window with any video to associated with the song will start playing. The user has the option to pause, skip or change the song at any time using the playlist button on the page.
+
+** NOTE ** Backend needs to be setup with correct API keys to work properly.
 
 ### Built With
 
-- [React.js]()
-- [Node.js]()
+- [React.js](https://react.dev)
+- [Node.js](https://nodejs.org)
   - [google-search-results-nodejs](https://github.com/serpapi/google-search-results-nodejs)
-- [OpenAI]()
+- [OpenAI](https://openai.com)
+- [Next.js](https://nextjs.org)
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these simple steps, you will need API keys from OpenAI and Googles SerpAPI for the app to function properly. The back end for this has been integrated into this single repo for simplicity and uses Next.js to run API endpoints.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+These are the steps to follow to get the started
 
 - npm
 
@@ -134,19 +110,43 @@ SERP_API_KEY=YOUR_KEY
 git clone https://github.com/mikeg1440/Book-Beats.git
 ```
 
-2. Install NPM packages
+2. Install packages with NPM or `yarn`
 
 ```sh
 npm install
 ```
 
-<!-- USAGE EXAMPLES -->
+3. Start dev environment
 
-## Usage
+```
+next dev
+```
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+4. Set dev or production API, look at line 50 in `index.js` and set it to either `prodApi` or `devApi`
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+## Todo
+
+- [x] Replace await with updated `.then()` use
+- [x] Add mock endpoints with saved data so we don't use up free requests for API keys
+- [x] Display video playlist incase first video isn't what user wanted
+  - [x] Implement a overlay that toggles with a button
+  - [x] Load song names
+  - [x] Add click functionality to change video
+  - [x] Change song data to pass a object instead of just song name
+  - [x] Add thumbnail image and more formatting to emphasize song name
+  - [x] Save song object instead of just name
+- [ ] Display playlist that AI suggested from book title
+  - [ ] Add song click functionality that changes song from playlist
+- [ ] Change test api calls back to openai api calls
+- [x] Add loading overlay
+
+### Ideas
+
+- [x] Display the full list of songs returned by the AI
+- [ ] Give users ability to select from the the top 3 youtube videos in case the first one isn't good
+  - [ ] Autoplay the next song in the list when a song finishes
+  - [x] Display playlist for user to see
+  - [x] Allow user to select from playlist
 
 <!-- ROADMAP -->
 
@@ -203,4 +203,4 @@ Project Link: [https://github.com/mikeg1440/Book-Beats](https://github.com/mikeg
 [license-url]: https://github.com/mikeg1440/Book-Beats/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/michaelgaudreau
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: screenshots/SearchResult1.png
